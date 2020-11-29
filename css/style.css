@@ -1,0 +1,77 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  background: #eee;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.wave {
+  opacity: .7;
+  position: absolute;
+  top: 97%;
+  left: 62%;
+  background: #f51fc4;;
+  width: 110px;
+  height: 110px;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: 45% 50%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+  float:left;
+}
+
+.wave.-three {
+  animation: drift 5000ms infinite linear;
+  background-color: blue;
+}
+
+.wave.-two {
+  animation: drift 7000ms infinite linear;
+  opacity: .7;
+  background: yellow;
+}
+
+.wave.-four {
+  animation: drift 9000ms infinite linear;
+  opacity: .7;
+  background: white;
+}
+
+.background-box {
+  width:100%;
+  height: 100%;
+  background-color: ;
+
+}
+
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+.clip-polygon {
+  clip-path: polygon(62% 6%, 62% 30%, 84% 81%, 86% 92%, 81% 100%, 30% 100%, 25% 93%, 27% 82%, 46% 30%, 46% 6%);}
